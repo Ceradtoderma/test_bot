@@ -27,8 +27,13 @@ class ParsAT:
         self.password = password
         self.url = url
         self.name = name
-        self.driver = webdriver.Chrome('C:\\Users\\aisav\\PycharmProjects\\test_bot\\autor_today\\chromedriver.exe',
+        # self.driver = webdriver.Chrome('C:\\Users\\aisav\\PycharmProjects\\test_bot\\autor_today\\chromedriver.exe',
+        #                                chrome_options=chrome_options)
+
+        self.driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),
                                        chrome_options=chrome_options)
+
+
         self.text = ''
         self.state = 'ok'
         self.pars = True
