@@ -95,6 +95,10 @@ class ParsAT:
         except:
             err = self.driver.find_element(By.TAG_NAME, 'h1')
 
+            full_error = self.driver.page_source
+            print(full_error)
+
+
             self.state = 'err'
             self.error = err.text
             self.driver.close()
