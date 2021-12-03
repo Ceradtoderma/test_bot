@@ -1,8 +1,11 @@
 from aiogram import types
 
+
 start = types.InlineKeyboardMarkup()
 buttons = [
     types.InlineKeyboardButton('Парсер', callback_data='parser'),
+    types.InlineKeyboardButton('Сыр', callback_data='cheese'),
+
 ]
 start.add(*buttons)
 
@@ -24,11 +27,17 @@ parser_auth.add(types.InlineKeyboardButton('Без логина', callback_data=
 parser_login = types.InlineKeyboardMarkup()
 parser_login.add(types.InlineKeyboardButton('Попробовать залогинится', callback_data='login'))
 
+cheese_start = types.InlineKeyboardMarkup()
+cheese_start.add(types.InlineKeyboardButton('Все сыры', callback_data='all_cheese'))
+cheese_start.add(types.InlineKeyboardButton('Добавить сыр', callback_data='add_cheese'))
+cheese_start.add(types.InlineKeyboardButton('Посмотреть конкретный', callback_data='one_cheese'))
+
 keyboards = {
     'start': start,
     'weather_day': weather_day,
     'parser_start': parser_start,
     'parser_auth': parser_auth,
     'parser_login': parser_login,
+    'cheese_start': cheese_start,
 
 }
