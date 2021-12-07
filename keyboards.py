@@ -3,8 +3,8 @@ from aiogram import types
 
 start = types.InlineKeyboardMarkup()
 buttons = [
-    types.InlineKeyboardButton('Парсер', callback_data='parser'),
-    types.InlineKeyboardButton('Сыр', callback_data='cheese'),
+    types.InlineKeyboardButton('Кнопка GUI', callback_data='gui_btn'),
+
 
 ]
 start.add(*buttons)
